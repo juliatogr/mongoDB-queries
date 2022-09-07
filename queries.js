@@ -65,7 +65,7 @@ db.restaurants.find({$or: [{cuisine: {$nin: ["American ", "Chinese"]}}, {name: {
 db.restaurants.find({grades: {$elemMatch: {grade: "A", score: 11 , date: ISODate("2014-08-11T00:00:00Z")}}}, {restaurant_id: 1, name: 1, grades: 1})
 
 // 23. Escriu una consulta per trobar el restaurant_id, name i grades per a aquells restaurants on el 2n element de varietat de graus conté un grau de "A" i marcador 9 sobre un ISODate "2014-08-11T00:00:00Z".
-db.restaurants.find({"grades.1": {grade: "A", score: 9 , date: {$in: [ISODate("2014-08-11T00:00:00Z")]}}}, {restaurant_id: 1, name: 1, grades: 1})
+db.restaurants.find({"grades.1": {date: ISODate("2014-08-11T00:00:00Z"), grade: "A", score: 9}}, {restaurant_id: 1, name: 1, grades: 1})
 
 // 24. Escriu una consulta per trobar el restaurant_id, name, adreça i ubicació geogràfica per a aquells restaurants on el segon element del array coord conté un valor que és més de 42 i fins a 52.
 // 25. Escriu una consulta per organitzar el nom dels restaurants en ordre ascendent juntament amb totes les columnes.

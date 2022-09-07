@@ -41,14 +41,32 @@ db.restaurants.find({cuisine: {$nin: ["American "]}, "grades.grade": "A", boroug
 db.restaurants.find({name: /^Wil/}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
 
 // 15. Escriu una consulta per trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que contenen 'ces' com les últimes tres lletres en el seu nom.
+db.restaurants.find({name: /ces+$/}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
+
 // 16. Escriu una consulta per trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que contenen 'Reg' com tres lletres en algun lloc en el seu nom.
+db.restaurants.find({name: /Reg/}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
+
 // 17. Escriu una consulta per trobar els restaurants que pertanyen al Bronx i van preparar qualsevol plat americà o xinès.
+db.restaurants.find({borough: "Bronx", cuisine: {$in: ["American ", "Chinese"]}})
+
 // 18. Escriu una consulta per trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que pertanyen a Staten Island o Queens o Bronx o Brooklyn.
+db.restaurants.find({borough: {$in: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
+
 // 19. Escriu una consulta per trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que no pertanyen a Staten Island o Queens o Bronx o Brooklyn.
+db.restaurants.find({borough: {$nin: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
+
 // 20. Escriu una consulta per trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que aconsegueixin un marcador que no és més de 10.
+db.restaurants.find({"grades.score": {$lte: 10}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
+
 // 21. Escriu una consulta per trobar el restaurant_id, name, borough i cuisine per a aquells restaurants que preparen peix excepte 'American' i 'Chinees' o el name del restaurant comença amb lletres 'Wil'.
+db.restaurants.find({$or: [{cuisine: {$nin: ["American ", "Chinese"]}}, {name: {$regex: /^Wil/}}]}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1})
+
 // 22. Escriu una consulta per trobar el restaurant_id, name, i grades per a aquells restaurants que aconsegueixin un grau "A" i un score 11 en dades d'estudi ISODate "2014-08-11T00:00:00Z".
+db.restaurants.find({grades: {$elemMatch: {grade: "A", score: 11 , date: ISODate("2014-08-11T00:00:00Z")}}}, {restaurant_id: 1, name: 1, grades: 1})
+
 // 23. Escriu una consulta per trobar el restaurant_id, name i grades per a aquells restaurants on el 2n element de varietat de graus conté un grau de "A" i marcador 9 sobre un ISODate "2014-08-11T00:00:00Z".
+db.restaurants.find({"grades.1": {grade: "A", score: 9 , date: ISODate("2014-08-11T00:00:00Z")}}, {restaurant_id: 1, name: 1, grades: 1})
+
 // 24. Escriu una consulta per trobar el restaurant_id, name, adreça i ubicació geogràfica per a aquells restaurants on el segon element del array coord conté un valor que és més de 42 i fins a 52.
 // 25. Escriu una consulta per organitzar el nom dels restaurants en ordre ascendent juntament amb totes les columnes.
 // 26. Escriu una consulta per organitzar el nom dels restaurants en ordre descendent juntament amb totes les columnes.

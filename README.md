@@ -36,7 +36,7 @@ The next links helped me a lot to finish this task.
 
 - *How to Use a SQL LIKE Statement in MongoDB queries:* https://chartio.com/resources/tutorials/how-to-use-a-sql-like-statement-in-mongodb/
 
-- *Regex Tutorial:" https://www.regular-expressions.info/anchors.html#:~:text=Useful%20Applications&text=The%20correct%20regex%20to%20use,to%20be%20able%20to%20match.
+- *Regex Tutorial:* https://www.regular-expressions.info/anchors.html#:~:text=Useful%20Applications&text=The%20correct%20regex%20to%20use,to%20be%20able%20to%20match.
 
 - *MongoDB Manual - $exists:* https://www.mongodb.com/docs/manual/reference/operator/query/exists/
 

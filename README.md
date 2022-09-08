@@ -5,13 +5,14 @@ Repository created to deliver the fourth task of the second sprint of the BackEn
 <img src=https://user-images.githubusercontent.com/72571435/179958350-c8db27b9-ada1-45d3-8ab4-6f2dcd31eb30.png width="120" height="120" />
 </p>
 
-## statement
+## Statement
 CAT: Tenim una col·lecció d'Objectes Restaurant a la ciutat de Nova York, i necessitem algunes consultes... pots ajudar-nos?
+
 EN: We have a restaurant object collection at New York city, and we need some queries... can you help us?
 
 All query statements are commented in Catalan inside queries_commented.js file.
 
-## delivery requirements:
+## Delivery Requirements:
 
 Enviar la URL a un repositori anomenat mongoDB-queries que contingui la solució:
 
@@ -23,11 +24,11 @@ EN:
 - It needs to be delivered all queries in the same .js file, with the code obfuscated (one sentence per row).
 - If you want it to, you can also deliver another file without the code obfuscated, including your own notes in the queries.
 
-## final delivery
+## Final Delivery
 
 queries_delivery.js is the obfuscated code required. I finally added the queries_commented.js to add comments about how I solved each query.
 
-## util links
+## Util Links
 
 The next links helped me a lot to finish this task.
 

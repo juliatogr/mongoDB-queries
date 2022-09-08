@@ -32,7 +32,7 @@ queries_delivery.js is the obfuscated code required. I finally added the queries
 
 The next links helped me a lot to finish this task.
 
-- *MongoDB query question $gt, $lt:" https://stackoverflow.com/questions/4966203/mongo-query-question-gt-lt
+- *MongoDB query question $gt, $lt:* https://stackoverflow.com/questions/4966203/mongo-query-question-gt-lt
 
 - *How to Use a SQL LIKE Statement in MongoDB queries:* https://chartio.com/resources/tutorials/how-to-use-a-sql-like-statement-in-mongodb/
 
